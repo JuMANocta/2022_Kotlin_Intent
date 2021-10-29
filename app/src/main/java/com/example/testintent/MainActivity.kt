@@ -13,9 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val but = findViewById<Button>(R.id.button);
+        // Déclaration du bouton pour utilisation
+        val btn = findViewById<Button>(R.id.button)
+        // Déclaration d'un INTENT pour charger la nouvelle Activity
         val intent = Intent(this,MainActivity2::class.java)
-        but.setOnClickListener {
+        // Spécifier action à lancer (MainActivity2) pour charger d'MainActivity2
+
+        // setOnClickListener utilise une LAMBDA pour réduire la verbosité du code
+        btn.setOnClickListener {
             Toast.makeText(this, "essai", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
